@@ -126,12 +126,36 @@ public class Bank {
      * {@link #take(Bank)} to subtract from this bank.
      * 
      * Change making attempt start at largest bill type/denomination and works down with remaining needed amount.
-     * 
+     * This is not optimally functional.
+     *
      * @param amount
      * @return
      * @throws SimpleException
      */
     public Bank change(final int amount) throws SimpleException {
+        
+        /* draft psuedocode for improvement:
+         *
+         * bool isEligibleForReduced5Attempt = original amount mod 5 != 0
+         * 
+         * attemptedChangeBank = ... ~existing method code ...
+         *
+         * if(unsuccessful change made
+         *    && isEligibleForReduced5Attempt
+         *    && 5's are used in previous change made) {
+         *        attemptedChangeBankLess5 -> remove 1 $5 bill from attemptedChangeBank
+         *        remainingChangeNeeded$ = attemptedChangeBankLess5
+         *        tempStillAvailBank = thisBank.take(attemptedChangeBankLess5)
+         *        
+         *        // NOTE: **change cannot attempt to use any $5's during the following change cycle**
+         *        remainingChangeNeededBank = tempStillAvailBank.change(remainingChangeNeeded$)
+         *
+         *        hopefullyCompleteChangeBank = attemptedChangeBankLess5.put(remainingChangeNeededBank)
+         *
+         *        if(hopefullyCompleteChangeBank != originalChangeAmount) {
+         *            throw insufficient funds
+         *        }
+         */
         
         if(amount < 0) {
             throw SimpleException.Error.InvalidAmount.getException();
