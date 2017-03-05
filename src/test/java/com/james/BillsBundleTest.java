@@ -1,4 +1,4 @@
-package test.java;
+package com.james;
 
 import static org.junit.Assert.*;
 
@@ -7,9 +7,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import main.java.BillType;
-import main.java.BillsBundle;
-import main.java.SimpleException;
+import com.james.BillType;
+import com.james.BillsBundle;
+import com.james.SimpleException;
 
 public class BillsBundleTest {
     

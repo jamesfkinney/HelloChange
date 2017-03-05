@@ -1,4 +1,4 @@
-package test.java;
+package com.james;
 
 import static org.junit.Assert.*;
 
@@ -7,8 +7,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import main.java.Bank;
-import main.java.SimpleException;
+import com.james.Bank;
+import com.james.SimpleException;
 
 public class BankTest {
     

@@ -1,4 +1,4 @@
-package main.java;
+package com.james;
 
 import java.io.Console;
 import java.util.Scanner;

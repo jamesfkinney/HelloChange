@@ -1,4 +1,4 @@
-package main.java;
+package com.james;
 
 /**
  * Object containing a bundle of bills of the same type.  For example, 2 $10 bills.

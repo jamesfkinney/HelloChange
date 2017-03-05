@@ -1,5 +1,12 @@
+# ignore MacOS files
+.DS_Store
+
+# ignore Eclipse files
 .settings
 .project
 .classpath
-.DS_Store
 bin
+
+# ignore Gradle build files
+.gradle
+build

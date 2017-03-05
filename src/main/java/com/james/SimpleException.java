@@ -1,4 +1,4 @@
-package main.java;
+package com.james;
 
 /**
  * Simple, no frills exception used throughout application.

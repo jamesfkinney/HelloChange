@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+
+jar {
+    baseName = 'HelloChange'
+    version = '0.0.1'
+    manifest {
+        attributes(
+            'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+            'Main-Class': project.getProperty('mainClass')
+        )
+    }
+}
+
+// for application which won't run without larger changes because non-interactive console
+mainClassName =project.getProperty('mainClass')
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}

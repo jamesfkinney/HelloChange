@@ -1,4 +1,4 @@
-package main.java;
+package com.james;
 
 /**
  * Enum of valid bill types and denominations.
